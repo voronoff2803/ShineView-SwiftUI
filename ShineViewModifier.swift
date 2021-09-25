@@ -27,14 +27,15 @@ struct GlareView: View {
     var body: some View {
         GeometryReader { geometry in
             let angleRadians = angle * .pi / 180
-            let offset = (geometry.size.height / 2) * tan(angleRadians)
             let fullHeight = ((geometry.size.height / 2) / (sin((.pi / 2) - angleRadians))) * 2 + 40
+            let offset = (fullHeight / 2) * tan(angleRadians)
             
             Rectangle()
                 .fill(Color.white.opacity(oppacity))
                 .frame(width: glareWidth, height: fullHeight)
                 .rotationEffect(Angle(radians: angleRadians), anchor: .center)
                 .offset(x: animation ? geometry.size.width + offset : -glareWidth - offset, y: -20)
+                .blendMode(.colorDodge)
         }
         .onChange(of: animateTrigger) { _ in
             animate()
