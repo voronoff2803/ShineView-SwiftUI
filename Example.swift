@@ -19,6 +19,7 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(18)
+            
                 .shineEffect(animationTrigger: $animateTrigger)
         }
     }
