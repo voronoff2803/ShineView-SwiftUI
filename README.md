@@ -3,7 +3,7 @@ Animated shine effect for your views
 
 ![Alt Text](https://github.com/voronoff2803/Shine-View-SwiftUI/blob/main/media/example.gif?raw=true)
 
-```
+```javascript
 @State var animateTrigger = false
     var body: some View {
         Button(action: { animateTrigger.toggle() }) {
