@@ -5,6 +5,8 @@ Animated shine effect for your views
 
 ```javascript
 @State var animateTrigger = false
+
+
     var body: some View {
         Button(action: { animateTrigger.toggle() }) {
             Text("Shine View")
