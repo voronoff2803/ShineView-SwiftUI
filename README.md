@@ -16,7 +16,7 @@ Animated shine effect for your views
                 .background(Color.blue)
                 .cornerRadius(18)
             
-                .shineEffect(animationTrigger: $animateTrigger)  <<< Add shine effect
+                .shineEffect(animationTrigger: $animateTrigger)  <<< Shine effect
         }
     }
 ```
